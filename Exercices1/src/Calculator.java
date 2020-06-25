@@ -13,9 +13,10 @@ public class Calculator {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Saisissez une opération : ");
-		String operation = sc.nextLine();
+		String operationInput = sc.nextLine();
 		sc.close();
 
+		String operation = operationInput.replaceAll(" ","");
 		return operation;
 	}
 
@@ -54,8 +55,6 @@ public class Calculator {
 					break;
 				case '/' :
 					myCalculator.result += previousInt / nextInt;
-					break;
-				case ' ' :
 					break;
 				default :
 					break;
