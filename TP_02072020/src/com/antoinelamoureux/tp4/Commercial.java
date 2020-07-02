@@ -28,7 +28,7 @@ public class Commercial extends Salarie {
 
 	@Override
 	public void calculSalaire(String nom, double salaire) {
-		System.out.println("Le salaire réel de "+ nom + " est de " + (salaire + salaire * m_pcCommission / 100));
+		System.out.println("Le salaire réel de "+ nom + " est de " + (salaire + m_dChiffreAffaire / 100 * m_pcCommission));
 	}
 	
 	@Override
