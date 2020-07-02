@@ -18,5 +18,7 @@ public class Application {
 		System.out.println(salarie1.equals(commercial1));	
 	
 		System.out.println(commercial1.toString());
+		
+		System.out.println("Nombre d'instances crées : "+Salarie.getInstanceCount());
 	}
 }

@@ -10,6 +10,7 @@ public class Application {
 		System.out.println(salarie1.getM_nService());
 		System.out.println(salarie1.getM_strNom());
 		System.out.println(salarie1.getM_dSalaire());
+		System.out.println("Nombre d'instances crées : "+Salarie.getInstanceCount());
 	}
 
 }

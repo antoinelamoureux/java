@@ -6,7 +6,12 @@ public class Salarie {
 	private int m_nService;
 	private String m_strNom;
 	private double m_dSalaire;
+	private static int instanceCount = 0;
 	
+    { 
+		  setInstanceCount(getInstanceCount() + 1);
+	}
+    
 	public Salarie(int m_nMatricule, int m_nCategorie, int m_nService, String m_strNom, double m_dSalaire) {
 		this.m_nMatricule = m_nMatricule;
 		this.m_nCategorie = m_nCategorie;
@@ -24,6 +29,7 @@ public class Salarie {
 	public int getM_nCategorie() {
 		return m_nCategorie;
 	}
+
 	public void setM_nCategorie(int m_nCategorie) {
 		this.m_nCategorie = m_nCategorie;
 	}
@@ -48,5 +54,13 @@ public class Salarie {
 	
 	public void calculSalaire(String nom, double salaire) {
 		System.out.print("Le salaire de"+ nom + "est de" +salaire);
+	}
+
+	public static int getInstanceCount() {
+		return instanceCount;
+	}
+
+	public static void setInstanceCount(int instanceCount) {
+		Salarie.instanceCount = instanceCount;
 	}
 }
